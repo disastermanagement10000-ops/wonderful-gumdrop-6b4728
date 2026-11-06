@@ -1,0 +1,25 @@
+{
+  "name": "repo",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "node --experimental-vm-modules --test tests/*.test.mjs",
+    "typecheck": "tsc --noEmit --module nodenext --moduleResolution nodenext --target es2022 --skipLibCheck db/schema.ts db/index.ts netlify/functions/bookings.mts drizzle.config.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@netlify/database": "^2.0.1",
+    "@netlify/functions": "^6.1.0",
+    "@netlify/identity": "^2.0.0",
+    "drizzle-kit": "1.0.0-beta.22",
+    "drizzle-orm": "^1.0.0-beta.22"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "typescript": "^5.9.3"
+  },
+  "private": true
+}
